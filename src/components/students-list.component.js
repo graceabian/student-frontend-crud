@@ -32,6 +32,8 @@ export default class StudentsList extends Component {
         this.setState({
           students: response.data,
         });
+        console.log("sa1");
+        console.log(JSON.stringify(response.data));
         console.log(response.data);
       })
       .catch((e) => {
@@ -74,8 +76,7 @@ export default class StudentsList extends Component {
       });
   }
   render() {
-    const { searchTitle, tutorials, currentTutorial, currentIndex } =
-      this.state;
+    const { searchName, students, currentStudent, currentIndex } = this.state;
     return (
       <div className="list row">
         <div className="col-md-8">

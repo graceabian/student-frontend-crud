@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Switch, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
 import AddStudent from "./components/add-student.component";
@@ -29,11 +29,12 @@ class App extends Component {
           </div>
         </nav>
         <div className="container mt-3">
-          <Switch>
-            <Route exact path={["/", "/students"]} component={StudentsList} />
-            <Route exact path="/create" component={AddStudent} />
-            <Route path="/students/:id" component={Student} />
-          </Switch>
+          <Routes>
+            <Route exact path="/" element={<StudentsList />} />
+            <Route exact path="/students" element={<StudentsList />} />
+            <Route exact path="/create" element={<AddStudent />} />
+            <Route path="/students/:id" element={<Student />} />
+          </Routes>
         </div>
       </div>
     );

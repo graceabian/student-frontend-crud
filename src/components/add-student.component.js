@@ -108,7 +108,7 @@ export default class CreateStudent extends Component {
                     checked={this.state.gender === "Male"}
                     onChange={this.onChangeGender}
                   />
-                  Male
+                  &nbsp;&nbsp;Male
                 </label>
               </div>
               <div className="radio">
@@ -119,7 +119,7 @@ export default class CreateStudent extends Component {
                     checked={this.state.gender === "Female"}
                     onChange={this.onChangeGender}
                   />
-                  Female
+                  &nbsp;&nbsp;Female
                 </label>
               </div>
               <div className="radio">
@@ -130,7 +130,7 @@ export default class CreateStudent extends Component {
                     checked={this.state.gender === "Other"}
                     onChange={this.onChangeGender}
                   />
-                  Other
+                  &nbsp;&nbsp;Other
                 </label>
               </div>
             </div>
